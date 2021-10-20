@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web 6</title>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web6</title>
 </head>
-
 <body>
-    <div class="one">
-        <p>Цена товара: <input type="text" placeholder="Введи цену" oninput="changeHalder1(this)" id="n1"></p>
-        <p>Количество товара: <input type="text" placeholder="Введи количество" oninput="changeHalder2(this)" id="n2">
-        </p>
-        <button onclick="proiz()">Результат</button>
-        <hr>
-        <p id="out"></p>
-    </div>
+
+  <div class="one">
+    <p>Цена товара: <input type="text" placeholder="Введи цену" oninput="changeHalder1(this)" id="n1"></p>
+    <p>Количество товара: <input type="text" placeholder="Введи количество" oninput="changeHalder2(this)" id="n2">
+    </p>
+    <button onclick="proiz()">Результат</button>
     <hr>
-    <div class="two">
-        <p>
-            Количество товара: <input type="text" placeholder="Введи количество" oninput="onInput (this)" onkeyup= "this.value = this.value.replace(/[^\d]/g,'');" id="m1">
-        </p>
-        <div id="prodPrice">Выберите тип товара</div>
-        Тип товара:
-        <form>
-            <select name="prodType">
-                <option value="1">Product 1</option>
-                <option value="2">Product 2</option>
-                <option value="3">Product 3</option>
-            </select>
-            <div id="radios">
-                <label><input type="radio" name="prodOptions" value="option1"> Опция 1</label>
-                <label><input type="radio" name="prodOptions" value="option2"> Опция 2</label>
-                <label><input type="radio" name="prodOptions" value="option3"> Опция 3</label>
-            </div>
-            <div id="checkboxes">
-                <label><input type="checkbox" name="prop1"> Свойство 1</label>
-                <label><input type="checkbox" name="prop2"> Свойство 2</label>
-            </div>
-        </form>
-    </div>
+    <p id="out"></p>
+</div>
+<hr>
+
+  <div class="сontainer">
+    <form>
+      <p>Количество товара: <input type="text" name="number" placeholder="Количество"></p>
+      Тип товара:
+      <select name="prodType">
+        <option value="0">Product 1</option>
+        <option value="1">Product 2</option>
+        <option value="2">Product 3</option>
+      </select>
+  
+      <div id="radios">
+        <label><input type="radio" name="prodOptions" value="option1"> Radio 1 </label>
+        <label><input type="radio" name="prodOptions" value="option2"> Radio 2 </label>
+        <label><input type="radio" name="prodOptions" value="option3"> Radio 3 </label>
+      </div>
+      <div id="checkboxes">
+        <label><input type="checkbox" name="prop1"> Option 1 </label>
+        <label><input type="checkbox" name="prop2"> Option 2 </label>
+        <label><input type="checkbox" name="prop3"> Option 3</label>
+      </div>
+      <br>
+      <button id="butt" onclick="return calcu();"> Результат </button>
+      <div id="prodPrice"></div>
+    </form>
+    <hr>
+    <div id="result"> </div>
+  </div>
+  <script src="script.js"></script>
 
 </body>
-
 </html>
